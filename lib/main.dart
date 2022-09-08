@@ -1,5 +1,7 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
+// import 'package:flutter/cupertino.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,6 +16,11 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   Color myColor = Colors.white;
+  Color like = Colors.black;
+  Color like1 = Colors.black;
+  Color like2 = Colors.black;
+  Color like3 = Colors.black;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -56,9 +63,18 @@ class _MyAppState extends State<MyApp> {
                       ),
                       IconButton(
                         onPressed: (() {
+                          setState(() {
+                            if (like == Colors.black)
+                              like = Colors.blue;
+                            else
+                              like = Colors.black;
+                          });
                           print("Liked!!");
                         }),
-                        icon: Icon(Icons.thumb_up),
+                        icon: Icon(
+                          Icons.thumb_up,
+                          color: like,
+                        ),
                       ),
                       IconButton(
                         onPressed: (() {
@@ -90,9 +106,18 @@ class _MyAppState extends State<MyApp> {
                         children: [
                           IconButton(
                             onPressed: (() {
+                              setState(() {
+                                if (like1 == Colors.black)
+                                  like1 = Colors.blue;
+                                else
+                                  like1 = Colors.black;
+                              });
                               print("Liked!!");
                             }),
-                            icon: Icon(Icons.thumb_up),
+                            icon: Icon(
+                              Icons.thumb_up,
+                              color: like1,
+                            ),
                           ),
                           IconButton(
                             onPressed: (() {
@@ -125,9 +150,18 @@ class _MyAppState extends State<MyApp> {
                       ),
                       IconButton(
                         onPressed: (() {
+                          setState(() {
+                            if (like2 == Colors.black)
+                              like2 = Colors.blue;
+                            else
+                              like2 = Colors.black;
+                          });
                           print("Liked!!");
                         }),
-                        icon: Icon(Icons.thumb_up),
+                        icon: Icon(
+                          Icons.thumb_up,
+                          color: like2,
+                        ),
                       ),
                       IconButton(
                         onPressed: (() {
@@ -169,9 +203,18 @@ class _MyAppState extends State<MyApp> {
                         children: [
                           IconButton(
                             onPressed: (() {
+                              setState(() {
+                                if (like3 == Colors.black)
+                                  like3 = Colors.blue;
+                                else
+                                  like3 = Colors.black;
+                              });
                               print("Liked!!");
                             }),
-                            icon: Icon(Icons.thumb_up),
+                            icon: Icon(
+                              Icons.thumb_up,
+                              color: like3,
+                            ),
                           ),
                           IconButton(
                             onPressed: (() {
