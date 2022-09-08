@@ -20,7 +20,15 @@ class _MyAppState extends State<MyApp> {
         debugShowCheckedModeBanner: false,
         home: Scaffold(
             appBar: AppBar(
-              actions: [IconButton(onPressed: () {}, icon: Icon(Icons.home))],
+              actions: [
+                IconButton(
+                    onPressed: () {
+                      setState(() {
+                        myColor = Colors.white;
+                      });
+                    },
+                    icon: Icon(Icons.home))
+              ],
               title: Text(
                 "Photogram",
                 style: TextStyle(
